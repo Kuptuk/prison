@@ -4,9 +4,12 @@ from discord.utils import get
 import inspect
 import datetime
 import time
+import os
 
 client = commands.Bot(command_prefix = "-")
 client.remove_command("help")
+
+tt = os.environ.get("TOKEN")
 
 @client.event
 async def on_ready():
@@ -15,10 +18,10 @@ async def on_ready():
     min = now.split(":")[1]
     hour = now.split(":")[0].split(" ")[1]
     if int(min) % 10 == 0:
-      await client.get_channel(714136573079453799).send('<@&714138893036814397>, адская шахта скоро обновится!')
+      await client.get_channel(714136573079453799).send('<@&714138893036814397>, Г Г¤Г±ГЄГ Гї ГёГ ГµГІГ  Г±ГЄГ®Г°Г® Г®ГЎГ­Г®ГўГЁГІГ±Гї!')
       time.sleep(60)
     if (int(hour) == 15 and int(min) == 53) or (int(hour) == 9 and int(min) == 53):
-      await client.get_channel(714136573079453799).send('<@&714144632111366154>, совсем скоро служение!')
+      await client.get_channel(714136573079453799).send('<@&714144632111366154>, Г±Г®ГўГ±ГҐГ¬ Г±ГЄГ®Г°Г® Г±Г«ГіГ¦ГҐГ­ГЁГҐ!')
       time.sleep(60)
   
-client.run("NzE0MTM2NDAwNjQyOTY1NTQ1.XsqRXg.UOjWtyryNMAoeSqK48Sx7T9y5oA")
+client.run(tt)
