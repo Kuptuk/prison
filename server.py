@@ -18,6 +18,7 @@ async def on_ready():
     now = str(datetime.datetime.now())
     min = now.split(":")[1]
     hour = now.split(":")[0].split(" ")[1]
+    await client.get_channel(714136573079453799).send(hour)
     if int(min) % 10 == 0:
       await client.get_channel(714136573079453799).send('<@&714138893036814397> скоро обновится!')
       time.sleep(60)
