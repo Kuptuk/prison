@@ -14,6 +14,7 @@ tt = os.environ.get("TOKEN")
 
 @client.event
 async def on_ready():
+  await client.change_presence(status=discord.Status.dnd,activity=discord.Game("Снятие тупых модераторов."))
   while True:
     now = str(datetime.datetime.now())
     min = now.split(":")[1]
