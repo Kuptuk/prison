@@ -31,7 +31,7 @@ async def on_ready():
       await client.get_channel(714136573079453799).send('<@&714174328488591490> сработали!')
       await client.get_channel(714136573079453799).send('<@&718816998540181604> скоро обновится!')
       time.sleep(60)
-    if int(min) % 4 == 0 and min != '00':
+    if int(min) % 4 == 0 and min % 10 != 0:
       await client.get_channel(714136573079453799).send('<@&718816998540181604> скоро обновится!')
       time.sleep(60)
       
