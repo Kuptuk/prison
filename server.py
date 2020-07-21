@@ -29,6 +29,6 @@ async def check(message, id=None):
   else:
     id = id.replace("!", "").replace("@","").replace("<","").replace(">","")
   a = await client.fetch_user(int(id))
-  await message.channel.send(f'```css\nДата создания аккаунта {a}: {a.created_at}```')
+  await message.channel.send(f'```css\nДата создания аккаунта {a}: {str(a.created_at).split('.')[0]}```')
   
 client.run(tt)
